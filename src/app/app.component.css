@@ -58,6 +58,23 @@ position: absolute;
   margin-top: 7%;
 }
 
+.result{
+  margin-left: 58%;
+  margin-top: 35%;
+  position: absolute;
+  background-color: white;
+  width: 20%;
+  height: auto;
+  text-align: center;
+  border-radius: 25%;
+}
+
+.moreInformation{
+  margin-left: 58%;
+  margin-top: 40%;
+  width: 30%;
+  position: absolute;
+}
 
 .playerIconThree{
   position: absolute;

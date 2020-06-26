@@ -15,7 +15,7 @@ export class AppComponent implements OnInit{
   display = 0;
   playerArray: Player[];
 
-constructor(private simulationService: SimulationService) {
+constructor(public simulationService: SimulationService) {
 }
 
   ngOnInit(): void {
@@ -31,7 +31,11 @@ constructor(private simulationService: SimulationService) {
    this.display = this.display + 1;
     }
     console.log(this.playerArray);
+
+
   }
+
+
 
 }
 

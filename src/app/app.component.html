@@ -87,11 +87,12 @@
 
   </div>
 </div>
-<button *ngIf="display === 3"type="button" class="btn btn-warning" (click)="simulationService.teamOverall(playerArray)">Rozpocznij symulację!</button>
+<button *ngIf="display === 3"type="button" class="btn btn-warning" (click)="simulationService.teamOverall(playerArray)"  (click)="display=display+1" >Rozpocznij symulację!</button>
 <div  class="pitch">
 
   <img class="pitchIcon" src="../assets/beachVPitch.jpg" alt="volleyBallPeach">
 </div>
+
 <div *ngIf="playerArray !== undefined">
   <img class="playerIconOne" src="../assets/player.png" alt="volleyballPlayer">
 
@@ -108,5 +109,38 @@
   <img class="playerIconFour" src="../assets/player.png" alt="volleyballPlayer">
 </div>
 
+<!--*ngIf="display === 4" -->
+<div *ngIf="display === 4" >
+<div  class="result">
+  Wynik: {{simulationService.firstTeamSet}} : {{simulationService.secondTeamSet}}
+
+
+
+</div>
+
+<div class="moreInformation">
+<mat-accordion class="example-headers-align" multi>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Więcej infromacji
+      </mat-panel-title>
+      <mat-panel-description>
+
+
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+
+  <div >
+<p>Pierwszy set: {{simulationService.firstTeamSetPoints[0]}} : {{simulationService.secondTeamSetPoints[0]}}</p>
+    <p>Drugi set: {{simulationService.firstTeamSetPoints[1]}} : {{simulationService.secondTeamSetPoints[1]}}</p>
+    <p *ngIf="simulationService.firstTeamSetPoints.length === 3">Trzeci set: {{simulationService.firstTeamSetPoints[2]}} : {{simulationService.secondTeamSetPoints[2]}}</p>
+  </div>
+  </mat-expansion-panel>
+</mat-accordion>
+</div>
+</div>
 </body>
 </html>
