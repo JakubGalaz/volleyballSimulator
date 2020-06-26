@@ -1,0 +1,95 @@
+body {
+
+  background: url( "../assets/beachVolleyball.jpg") no-repeat fixed center;
+  min-height: 450%;
+
+
+}
+
+h1{
+  text-align: center;
+  padding-top: 2%;
+}
+
+.player{
+  padding: 5%;
+}
+
+.players{
+  padding: 2%;
+
+}
+
+.playerInfo{
+  display: block;
+  float: left;
+  width: 50%;
+}
+
+.pitch{
+  float: left;
+  display: block;
+  padding: 3%;
+margin-left: 50%;
+position: absolute;
+}
+
+.pitchIcon {
+  width: 70%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.playerIconOne{
+  position: absolute;
+  z-index: 50;
+  width: 5%;
+  height: auto;
+  margin-left: 12%;
+  margin-top: 7%;
+}
+
+.playerIconTwo{
+  position: absolute;
+  z-index: 50;
+  width: 5%;
+  height: auto;
+  margin-left: 20%;
+  margin-top: 7%;
+}
+
+
+.playerIconThree{
+  position: absolute;
+  z-index: 50;
+  width: 8%;
+  height: auto;
+  margin-left: 10%;
+  margin-top: 22%;
+}
+
+.playerIconFour{
+  position: absolute;
+  z-index: 50;
+  width: 8%;
+  height: auto;
+  margin-left: 20%;
+  margin-top: 22%;
+}
+.example-action-buttons {
+  padding-bottom: 20px;
+}
+
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-headers-align .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}

@@ -1,0 +1,127 @@
+<h2>Dodawanie Gracza</h2>
+<div>
+  <form [formGroup]="playerForm">
+    <div class="inputV">
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Imię</mat-label>
+          <input id="name" formControlName="name" matInput placeholder="Imię" />
+        </mat-form-field>
+      </p>
+      <p
+        class="alert"
+        *ngIf="playerForm.get('name').invalid && playerForm.get('name').dirty"
+      >
+        Pole jest wyamgane, zakres znaków 3-15
+      </p>
+
+    </div>
+    <div class="inputV">
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Nazwisko</mat-label>
+          <input id="surname" formControlName="surname" matInput placeholder="Nazwisko" />
+        </mat-form-field>
+      </p>
+      <p
+        class="alert"
+        *ngIf="playerForm.get('surname').invalid && playerForm.get('surname').dirty"
+      >
+        Pole jest wyamgane, zakres liczb 15-55
+      </p>
+    </div>
+    <div class="inputV">
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Wiek</mat-label>
+          <input id="age" formControlName="age" matInput placeholder="age" />
+        </mat-form-field>
+      </p>
+      <p
+        class="alert"
+        *ngIf="playerForm.get('age').invalid && playerForm.get('age').dirty"
+      >
+        Pole jest wyamgane, zakres znaków 1-100
+      </p>
+    </div>
+    <div class="inputV">
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Blok</mat-label>
+          <input id="block" formControlName="block" matInput placeholder="block" />
+        </mat-form-field>
+      </p>
+      <p
+        class="alert"
+        *ngIf="playerForm.get('block').invalid && playerForm.get('block').dirty"
+      >
+        Pole jest wyamgane, zakres znaków 1-100
+      </p>
+    </div>
+    <div class="inputV">
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Wyskok</mat-label>
+        <input id="jump" formControlName="jump" matInput placeholder="jump" />
+      </mat-form-field>
+    </p>
+    <p
+      class="alert"
+      *ngIf="playerForm.get('jump').invalid && playerForm.get('jump').dirty"
+    >
+      Pole jest wyamgane, zakres znaków 1-100
+    </p>
+  </div>
+    <div class="inputV">
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Wytzymałość</mat-label>
+          <input id="strength" formControlName="strength" matInput placeholder="strength" />
+        </mat-form-field>
+      </p>
+      <p
+        class="alert"
+        *ngIf="playerForm.get('strength').invalid && playerForm.get('strength').dirty"
+      >
+        Pole jest wyamgane, zakres znaków 1-100
+      </p>
+    </div>
+
+    <div class="inputV">
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Atak</mat-label>
+          <input id="attack" formControlName="attack" matInput placeholder="attack" />
+        </mat-form-field>
+      </p>
+      <p
+        class="alert"
+        *ngIf="playerForm.get('attack').invalid && playerForm.get('attack').dirty"
+      >
+        Pole jest wyamgane, zakres znaków 1-100
+      </p>
+    </div>
+
+    <div class="inputV">
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Przyjęcie</mat-label>
+          <input id="pickup" formControlName="pickup" matInput placeholder="pickup" />
+        </mat-form-field>
+      </p>
+      <p
+        class="alert"
+        *ngIf="playerForm.get('pickup').invalid && playerForm.get('pickup').dirty"
+      >
+        Pole jest wyamgane, zakres znaków 1-100
+      </p>
+    </div>
+
+    <button mat-button color="primary" (click)="addPlayer()"  [disabled]="playerForm.invalid" >Dodaj</button>
+
+
+
+
+
+  </form>
+</div>
