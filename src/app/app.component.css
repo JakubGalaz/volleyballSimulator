@@ -76,6 +76,10 @@ position: absolute;
   position: absolute;
 }
 
+mat-slider {
+  width: 300px;
+}
+
 .playerIconThree{
   position: absolute;
   z-index: 50;

@@ -12,6 +12,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
 import {SimulationService} from './simulation.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatSliderModule} from '@angular/material/slider';
+
 
 
 
@@ -33,7 +35,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatButtonModule,
     MatExpansionModule,
     MatIconModule,
-    NgbModule
+    NgbModule,
+    MatSliderModule
   ],
   providers: [SimulationService],
   bootstrap: [AppComponent]

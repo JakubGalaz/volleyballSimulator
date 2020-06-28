@@ -30,7 +30,7 @@
   <mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>
-        Dane pierwszego zawodnika
+        Dane drugiego zawodnika
       </mat-panel-title>
       <mat-panel-description>
 
@@ -39,7 +39,7 @@
     </mat-expansion-panel-header>
 
     <div  class="player">
-      <app-host-first-player></app-host-first-player>
+      <app-host-first-player (newPlayer)="onNewPlayer($event)"></app-host-first-player>
     </div>
 
   </mat-expansion-panel>
@@ -47,7 +47,7 @@
   <mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>
-        Dane pierwszego zawodnika
+        Dane trzeciego zawodnika
       </mat-panel-title>
       <mat-panel-description>
 
@@ -56,7 +56,7 @@
     </mat-expansion-panel-header>
 
     <div  class="player">
-      <app-host-first-player></app-host-first-player>
+      <app-host-first-player (newPlayer)="onNewPlayer($event)"></app-host-first-player>
     </div>
 
   </mat-expansion-panel>
@@ -66,7 +66,7 @@
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
-          Dane pierwszego zawodnika
+          Dane czwartego zawodnika
         </mat-panel-title>
         <mat-panel-description>
 
@@ -75,19 +75,32 @@
       </mat-expansion-panel-header>
 
       <div  class="player">
-        <app-host-first-player></app-host-first-player>
+        <app-host-first-player (newPlayer)="onNewPlayer($event)"></app-host-first-player>
       </div>
 
     </mat-expansion-panel>
 
 </mat-accordion>
 
+    <form [formGroup]="testForm">
+<div *ngIf="display === 4">
+<p>  Symulacja Testowa:</p>
+Wybierz liczbę symulowanych meczów
+  <mat-slider
+    formControlName="numberControl"
+    thumbLabel
+    [displayWith]="formatLabel"
+    tickInterval="1000"
+    min="1"
+    max="100000"></mat-slider>
 
-
+  <button type="button" class="btn btn-dark" (click)="simulation(playerArray)" >Przeprowadź symulację</button>
+</div>
+    </form>
 
   </div>
 </div>
-<button *ngIf="display === 3"type="button" class="btn btn-warning" (click)="simulationService.teamOverall(playerArray)"  (click)="display=display+1" >Rozpocznij symulację!</button>
+<button *ngIf="display >= 3"type="button" class="btn btn-warning" (click)="simulationService.teamOverall(playerArray)"  (click)="display=display+1" >Rozpocznij symulację!</button>
 <div  class="pitch">
 
   <img class="pitchIcon" src="../assets/beachVPitch.jpg" alt="volleyBallPeach">
@@ -110,7 +123,7 @@
 </div>
 
 <!--*ngIf="display === 4" -->
-<div *ngIf="display === 4" >
+<div *ngIf="display >= 4" >
 <div  class="result">
   Wynik: {{simulationService.firstTeamSet}} : {{simulationService.secondTeamSet}}
 
